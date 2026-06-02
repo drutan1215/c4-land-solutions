@@ -690,6 +690,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   color: var(--blue);
   margin-bottom: 0.4rem;
   transition: color var(--ease);
+  overflow-wrap: anywhere;
 }
 
 .contact-val:hover { color: var(--white); }
@@ -841,6 +842,23 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 }
 
 @media (max-width: 520px) {
+  .container { padding: 0 1rem; }
+
+  .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .btn-xl {
+    font-size: 0.95rem;
+    padding: 0.9rem 1rem;
+  }
+
   .services-grid   { grid-template-columns: 1fr; }
   .feature-list    { grid-template-columns: 1fr; }
   .why-grid        { grid-template-columns: 1fr; gap: 2rem; }
@@ -853,4 +871,6 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   .gallery-large { grid-column: span 1; }
 
   .hero-ctas { flex-direction: column; align-items: center; }
+
+  .contact-card { padding: 2.2rem 1rem; }
 }

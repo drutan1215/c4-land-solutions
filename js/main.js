@@ -11,19 +11,21 @@ window.addEventListener('scroll', () => {
 const navToggle = document.getElementById('navToggle');
 const navMenu   = document.getElementById('navMenu');
 
-navToggle.addEventListener('click', () => {
-  const open = navMenu.classList.toggle('open');
+function setMenuOpen(open) {
+  navMenu.classList.toggle('open', open);
   navToggle.classList.toggle('open', open);
-  navToggle.setAttribute('aria-expanded', open);
+  navToggle.setAttribute('aria-expanded', String(open));
+  navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   document.body.style.overflow = open ? 'hidden' : '';
+}
+
+navToggle.addEventListener('click', () => {
+  setMenuOpen(!navMenu.classList.contains('open'));
 });
 
 navMenu.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => {
-    navMenu.classList.remove('open');
-    navToggle.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    setMenuOpen(false);
   });
 });
 
