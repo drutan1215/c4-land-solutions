@@ -628,21 +628,11 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 }
 
 .area-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
+  max-width: 640px;
 }
 
 .area-content h2 { margin: 0.45rem 0 1.4rem; }
 .area-content p  { color: var(--muted); margin-bottom: 1.2rem; line-height: 1.75; }
-
-.area-visual { display: flex; justify-content: center; }
-
-.ohio-svg {
-  max-width: 400px;
-  width: 100%;
-}
 
 /* ── CONTACT ─────────────────────────── */
 .contact {
@@ -788,8 +778,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 
 /* ── RESPONSIVE ─────────────────────── */
 @media (max-width: 1024px) {
-  .about-grid,
-  .area-grid {
+  .about-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
