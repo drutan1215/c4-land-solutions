@@ -200,7 +200,7 @@
         <span class="eyebrow">Our Work</span>
         <h2>See the Results</h2>
         <div class="divider"></div>
-        <p class="section-sub">Take a look at completed jobs across Northeast Ohio. Photos coming soon — check back!</p>
+        <p class="section-sub">Real jobs completed across Northeast Ohio.</p>
       </div>
       <div class="gallery-grid">
         <div class="gallery-item gallery-large">
@@ -219,6 +219,34 @@
           <div class="gallery-ph"><span>More Photos Coming Soon</span></div>
         </div>
       </div>
+
+      <!-- Before & After -->
+      <div class="ba-header">
+        <span class="eyebrow">Transformations</span>
+        <h3>Before &amp; After</h3>
+      </div>
+      <div class="ba-grid">
+        <div class="ba-pair">
+          <div class="ba-item">
+            <img src="images/before-1.png" alt="Stump in front yard before grinding">
+            <span class="ba-label ba-before">Before</span>
+          </div>
+          <div class="ba-item">
+            <img src="images/after-1.png" alt="Clean front yard after stump removal">
+            <span class="ba-label ba-after">After</span>
+          </div>
+        </div>
+        <div class="ba-pair">
+          <div class="ba-item">
+            <img src="images/before-2.png" alt="Large stump in backyard before grinding">
+            <span class="ba-label ba-before">Before</span>
+          </div>
+          <div class="ba-item">
+            <img src="images/after-2.png" alt="Clean backyard after stump removal">
+            <span class="ba-label ba-after">After</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -235,22 +263,62 @@
           <a href="tel:3305924455" class="btn btn-primary">Call to Check Your Area</a>
         </div>
         <div class="area-visual">
-          <svg viewBox="0 0 340 360" xmlns="http://www.w3.org/2000/svg" class="ohio-svg">
-            <!-- Ohio outline (simplified) -->
-            <path d="M 65,18 L 285,12 L 302,32 L 308,55 L 302,82 L 290,108 L 280,138 L 268,172 L 254,205 L 238,232 L 218,256 L 196,278 L 172,298 L 150,312 L 130,310 L 108,298 L 85,276 L 64,250 L 50,220 L 36,192 L 26,162 L 18,134 L 15,106 L 18,80 L 30,56 L 44,36 Z"
-                  fill="none" stroke="#1e72d4" stroke-width="2.5" opacity="0.6"/>
-            <!-- NE Ohio region highlight -->
-            <path d="M 222,14 L 285,12 L 302,32 L 308,55 L 302,82 L 290,108 L 268,115 L 248,108 L 235,88 L 228,64 L 222,38 Z"
-                  fill="#1e72d4" fill-opacity="0.18" stroke="#1e72d4" stroke-width="1.5" opacity="0.8"/>
-            <!-- Clinton, OH marker -->
-            <circle cx="252" cy="122" r="7" fill="#1e72d4"/>
-            <circle cx="252" cy="122" r="14" fill="none" stroke="#1e72d4" stroke-width="1.5" opacity="0.5">
-              <animate attributeName="r" values="14;22;14" dur="2.5s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0.5;0;0.5" dur="2.5s" repeatCount="indefinite"/>
+          <svg viewBox="0 0 430 380" xmlns="http://www.w3.org/2000/svg" class="ohio-svg">
+            <defs>
+              <filter id="outline-glow" x="-8%" y="-8%" width="116%" height="116%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="dot-glow" x="-200%" y="-200%" width="500%" height="500%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <!-- Ohio state outline — geographically accurate simplified path -->
+            <!-- NW (IN/MI) → Michigan border → Lake Erie → PA border → Ohio River → Indiana border -->
+            <path d="
+              M 15,37
+              L 139,38
+              Q 172,48 206,60
+              Q 252,57 299,55
+              Q 344,30 382,20
+              L 405,10
+              L 405,137
+              L 395,163
+              Q 368,210 320,253
+              Q 284,285 252,309
+              Q 215,322 181,319
+              Q 142,318 104,317
+              Q 68,308 43,284
+              L 15,343
+              Z"
+              fill="rgba(30,114,212,0.05)"
+              stroke="#1e72d4"
+              stroke-width="2.2"
+              stroke-linejoin="round"
+              filter="url(#outline-glow)"
+            />
+
+            <!-- Clinton, OH — outer pulse rings -->
+            <circle cx="307" cy="111" r="10" fill="none" stroke="#1e72d4" stroke-width="1.5" opacity="0">
+              <animate attributeName="r" values="10;30;10" dur="3s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.7;0;0.7" dur="3s" repeatCount="indefinite"/>
             </circle>
-            <text x="268" y="126" fill="white" font-size="12" font-family="Oswald, sans-serif" font-weight="500" opacity="0.9">Clinton, OH</text>
-            <!-- OHIO watermark -->
-            <text x="100" y="230" fill="white" font-size="36" font-family="Bebas Neue, sans-serif" letter-spacing="4" opacity="0.08">OHIO</text>
+            <circle cx="307" cy="111" r="7" fill="none" stroke="#1e72d4" stroke-width="1.2" opacity="0">
+              <animate attributeName="r" values="7;22;7" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.6;0;0.6" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Glow layer behind dot -->
+            <circle cx="307" cy="111" r="8" fill="#1e72d4" filter="url(#dot-glow)" opacity="0.7"/>
+            <!-- Solid dot -->
+            <circle cx="307" cy="111" r="5" fill="#1e72d4"/>
+            <!-- Bright center -->
+            <circle cx="307" cy="111" r="2.5" fill="white" opacity="0.95"/>
+
+            <!-- Label -->
+            <text x="318" y="116" fill="white" font-size="11.5" font-family="Oswald, sans-serif" font-weight="500" opacity="0.92">Clinton, OH</text>
           </svg>
         </div>
       </div>
@@ -305,6 +373,20 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           Call 330-592-4455 — Free Estimate
         </a>
+      </div>
+
+      <div class="contact-form-wrap">
+        <div class="form-divider">
+          <span>Or send us a message</span>
+        </div>
+        <iframe
+          src="https://share.deftform.com/E8Y5yI"
+          title="Request a Free Estimate"
+          class="contact-iframe"
+          frameborder="0"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
   </section>
