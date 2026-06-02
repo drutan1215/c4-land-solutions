@@ -731,13 +731,8 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   background: var(--border);
 }
 
-.contact-iframe {
+.deftform {
   width: 100%;
-  min-height: 660px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--dark-3);
-  display: block;
 }
 
 /* ── FOOTER ─────────────────────────── */

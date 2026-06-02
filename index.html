@@ -41,7 +41,7 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
       <img src="images/logo.png" alt="C4 Land Solutions" class="hero-logo">
-      <h1 class="hero-headline">Clear the Land.<br>Get It Done Right.</h1>
+      <h1 class="hero-headline">Because Tree Removal<br>Isn't Finished Until<br>the Stump Is Gone.</h1>
       <p class="hero-sub">Professional Stump Grinding &amp; Land Clearing &nbsp;|&nbsp; Northeast Ohio<br>Family Owned &amp; Operated &nbsp;|&nbsp; Clinton, Ohio</p>
       <div class="hero-ctas">
         <a href="tel:3305924455" class="btn btn-primary">
@@ -215,9 +215,6 @@
         <div class="gallery-item">
           <img src="images/grinder-4.jpg" alt="Rayco RG55 grinding stump close up" class="gallery-img">
         </div>
-        <div class="gallery-item gallery-ph-item">
-          <div class="gallery-ph"><span>More Photos Coming Soon</span></div>
-        </div>
       </div>
 
       <!-- Before & After -->
@@ -263,7 +260,15 @@
           <a href="tel:3305924455" class="btn btn-primary">Call to Check Your Area</a>
         </div>
         <div class="area-visual">
-          <svg viewBox="0 0 430 380" xmlns="http://www.w3.org/2000/svg" class="ohio-svg">
+          <!--
+            Ohio border — geographically scaled to real lat/lon
+            ViewBox 0 0 430 460
+            x = (lon + 84.820) * 93.0 + 15  (93.0 px/deg lon)
+            y = (41.977 - lat) * 120.3 + 15  (120.3 px/deg lat)
+            Clockwise from NW: IN/MI corner → Michigan border →
+            Lake Erie shore → PA border → Ohio River (WV then KY) → Indiana border
+          -->
+          <svg viewBox="0 0 430 460" xmlns="http://www.w3.org/2000/svg" class="ohio-svg">
             <defs>
               <filter id="outline-glow" x="-8%" y="-8%" width="116%" height="116%">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
@@ -275,50 +280,50 @@
               </filter>
             </defs>
 
-            <!-- Ohio state outline — geographically accurate simplified path -->
-            <!-- NW (IN/MI) → Michigan border → Lake Erie → PA border → Ohio River → Indiana border -->
             <path d="
-              M 15,37
-              L 139,38
-              Q 172,48 206,60
-              Q 252,57 299,55
-              Q 344,30 382,20
-              L 405,10
-              L 405,137
-              L 395,163
-              Q 368,210 320,253
-              Q 284,285 252,309
-              Q 215,322 181,319
-              Q 142,318 104,317
-              Q 68,308 43,284
-              L 15,343
+              M 15,49
+              L 142,49
+              Q 184,66 226,85
+              Q 244,82 261,78
+              Q 284,75 306,72
+              Q 323,63 339,56
+              Q 365,40 391,28
+              L 415,15
+              L 415,176
+              Q 409,192 404,208
+              Q 400,226 396,245
+              Q 374,275 352,305
+              Q 335,323 318,341
+              Q 296,360 274,379
+              Q 267,387 259,394
+              Q 249,418 238,442
+              Q 226,436 213,429
+              Q 199,418 185,406
+              Q 157,408 128,409
+              Q 117,407 106,404
+              Q 75,383 44,362
+              Q 30,403 15,445
               Z"
-              fill="rgba(30,114,212,0.05)"
+              fill="rgba(30,114,212,0.06)"
               stroke="#1e72d4"
-              stroke-width="2.2"
+              stroke-width="2"
               stroke-linejoin="round"
               filter="url(#outline-glow)"
             />
 
-            <!-- Clinton, OH — outer pulse rings -->
-            <circle cx="307" cy="111" r="10" fill="none" stroke="#1e72d4" stroke-width="1.5" opacity="0">
-              <animate attributeName="r" values="10;30;10" dur="3s" repeatCount="indefinite"/>
+            <!-- Clinton, OH pulse rings -->
+            <circle cx="314" cy="142" r="10" fill="none" stroke="#1e72d4" stroke-width="1.5" opacity="0">
+              <animate attributeName="r" values="10;28;10" dur="3s" repeatCount="indefinite"/>
               <animate attributeName="opacity" values="0.7;0;0.7" dur="3s" repeatCount="indefinite"/>
             </circle>
-            <circle cx="307" cy="111" r="7" fill="none" stroke="#1e72d4" stroke-width="1.2" opacity="0">
-              <animate attributeName="r" values="7;22;7" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+            <circle cx="314" cy="142" r="7" fill="none" stroke="#1e72d4" stroke-width="1.2" opacity="0">
+              <animate attributeName="r" values="7;20;7" dur="3s" begin="0.6s" repeatCount="indefinite"/>
               <animate attributeName="opacity" values="0.6;0;0.6" dur="3s" begin="0.6s" repeatCount="indefinite"/>
             </circle>
-
-            <!-- Glow layer behind dot -->
-            <circle cx="307" cy="111" r="8" fill="#1e72d4" filter="url(#dot-glow)" opacity="0.7"/>
-            <!-- Solid dot -->
-            <circle cx="307" cy="111" r="5" fill="#1e72d4"/>
-            <!-- Bright center -->
-            <circle cx="307" cy="111" r="2.5" fill="white" opacity="0.95"/>
-
-            <!-- Label -->
-            <text x="318" y="116" fill="white" font-size="11.5" font-family="Oswald, sans-serif" font-weight="500" opacity="0.92">Clinton, OH</text>
+            <circle cx="314" cy="142" r="8" fill="#1e72d4" filter="url(#dot-glow)" opacity="0.7"/>
+            <circle cx="314" cy="142" r="5" fill="#1e72d4"/>
+            <circle cx="314" cy="142" r="2.5" fill="white" opacity="0.95"/>
+            <text x="325" y="147" fill="white" font-size="11.5" font-family="Oswald, sans-serif" font-weight="500" opacity="0.92">Clinton, OH</text>
           </svg>
         </div>
       </div>
@@ -379,14 +384,8 @@
         <div class="form-divider">
           <span>Or send us a message</span>
         </div>
-        <iframe
-          src="https://share.deftform.com/E8Y5yI"
-          title="Request a Free Estimate"
-          class="contact-iframe"
-          frameborder="0"
-          loading="lazy"
-          allowfullscreen>
-        </iframe>
+        <div class="deftform" data-form-id="178df8f3-1b4f-4d75-93d8-7aeccfc4ead7" data-form-width="100%" data-form-align="center" data-form-auto-height="1"></div>
+        <script src="https://cdn.deftform.com/embed.js"></script>
       </div>
     </div>
   </section>
