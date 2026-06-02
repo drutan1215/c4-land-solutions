@@ -278,7 +278,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 
 .hero-headline {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(3rem, 8vw, 5.8rem);
+  font-size: clamp(2.2rem, 8vw, 5.8rem);
   letter-spacing: 0.04em;
   line-height: 1.05;
   color: var(--white);
