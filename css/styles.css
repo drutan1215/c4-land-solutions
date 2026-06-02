@@ -740,7 +740,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   margin-bottom: 4rem;
 }
 
-.footer-logo { height: 78px; margin-bottom: 1.2rem; }
+.footer-logo { height: 78px; width: auto; margin-bottom: 1.2rem; }
 
 .footer-brand p {
   font-size: 0.88rem;
