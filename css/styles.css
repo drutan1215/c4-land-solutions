@@ -804,6 +804,29 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 
 .footer-bottom p { font-size: 0.78rem; color: var(--muted); }
 
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.06);
+  color: var(--muted);
+  transition: background var(--ease), color var(--ease);
+}
+
+.footer-social a:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
 .footer-powered { margin-top: 0.4rem; }
 .footer-powered a {
   color: var(--muted);
