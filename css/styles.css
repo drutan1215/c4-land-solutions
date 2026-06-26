@@ -804,6 +804,13 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 
 .footer-bottom p { font-size: 0.78rem; color: var(--muted); }
 
+.footer-powered { margin-top: 0.4rem; }
+.footer-powered a {
+  color: var(--muted);
+  transition: color var(--ease);
+}
+.footer-powered a:hover { color: var(--blue); }
+
 /* ── RESPONSIVE ─────────────────────── */
 @media (max-width: 1024px) {
   .about-grid {
