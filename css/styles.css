@@ -666,6 +666,25 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 
 .area-map { border-radius: var(--radius); overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.4); }
 
+.area-cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+
+.area-cities li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  background: var(--dark-3);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 0.4rem 0.85rem;
+}
+
 /* ── TESTIMONIALS ───────────────────── */
 .testimonials {
   background: var(--dark-1);
