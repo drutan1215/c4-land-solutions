@@ -528,7 +528,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.9rem;
 }
 
@@ -1023,10 +1023,6 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   .nav-menu.open + .nav-cta { display: none; }
 
   .service-feature { flex-direction: column; gap: 2rem; padding: 2.25rem; }
-
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 
   .contact-cards {
     grid-template-columns: 1fr;
