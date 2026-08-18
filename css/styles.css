@@ -528,7 +528,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.9rem;
 }
 
